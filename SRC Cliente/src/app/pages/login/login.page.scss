@@ -1,0 +1,29 @@
+.background-image {
+    --padding-top: 70%;
+	--padding-start: 10%;
+	--padding-end: 10%;
+    background-size: cover;
+	--background: url(../../../assets/image/ComplejoCl.jpeg) 0 0/100% 100% no-repeat;
+    background: var(--background);
+    background-color: rgb(0,0,0,10);
+   
+  }
+
+  .gradient-item {
+    --background: linear-gradient(90deg, rgba(26, 255, 0, 0.624) 0%, rgba(75, 121, 57, 0.723) 50%, rgb(0, 0, 0) 100%); /* Fondo con degradado transparente */
+    --border-style: none; /* Eliminar cualquier estilo de borde si es necesario */
+    --highlight-background-focused: transparent; /* Hacer transparente el fondo al enfocar */
+    /* Otros estilos personalizados si los necesitas */
+  }
+
+  .dark-text {
+    color: black; /* Cambia el color del texto a un tono más oscuro */
+        /* Otros estilos personalizados si los necesitas */
+  }
+  .custom-button {
+    --background-activated: #4ec434;
+    --border-color: rgb(47, 101, 29);
+    --background: #2b5425;
+    --border-style: solid;
+    --border-width: 1px;
+  }

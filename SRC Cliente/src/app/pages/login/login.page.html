@@ -1,0 +1,29 @@
+
+<ion-content class="background-image" >
+
+  <form>
+	<div >
+		<ion-item class="gradient-item">
+			<ion-input   class="dark-text" type="text" placeholder="Usuario" name="usuario" [(ngModel)]="username" required></ion-input>
+		  </ion-item>
+		  <ion-item class="gradient-item">
+			<ion-input class="dark-text" type="password" placeholder="Contraseña" name="Contraseña" [(ngModel)]="password" required></ion-input>
+		  </ion-item>
+	</div>
+
+		<ion-button type="submit" expand="block" class="custom-button" (click)="login()" >Iniciar</ion-button>
+		<ion-button type="button" expand="block" color="light" fill="clear"
+			>
+    <p class="fuente" >
+
+      <ion-text>¿Aún no eres miembro? ¡Inscribete!</ion-text>
+    </p>
+    
+		</ion-button>
+
+		<ion-button type="button" expand="block" color="success"  (click)="registro()">
+			<ion-icon name="star" slot="start"></ion-icon>
+			Registrate
+		</ion-button>
+	</form>
+</ion-content>

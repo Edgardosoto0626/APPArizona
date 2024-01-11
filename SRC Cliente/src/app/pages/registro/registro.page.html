@@ -1,0 +1,62 @@
+
+<ion-content [fullscreen]="true" class="bg-color">
+
+  <ion-card class="ion-no-margin">
+    <ion-card-header>
+      <ion-card-title>
+        Registrarse
+      </ion-card-title>
+      <ion-card-subtitle>
+        Crea tu cuenta 
+        <br>
+        llenando el formulario
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-input [(ngModel)]="name" label="Nombre" labelPlacement="floating" placeholder="Ingresar nombre" >
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-input [(ngModel)]="username" label="Nombre de Usuario"labelPlacement="floating" placeholder="Ingresar Nombre de Usuario" >
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="mail-outline"></ion-icon>
+        <ion-input [(ngModel)]="email" label="Email"  name="email" type="email" required >
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <ion-input [(ngModel)]="password" label="Contraseña" name="password" type="password" labelPlacement="floating" placeholder="Ingresar Contraseña" required  >
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <ion-input [(ngModel)]="confirPassword" label="Confirmar Contraseña" name="confirpassword" type="password"  labelPlacement="floating" placeholder="Repetir contraseña" required>
+        </ion-input>
+      </ion-item>
+      <div class="sign-btn-wrap">
+        <ion-button (click)="registrar()" shape="round" fill="solid" class="sign-btn" color="success"> Registrarse</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+<ion-alert
+[isOpen]="isAlertOpen"
+header="Información"
+
+[message]="mensaje"
+[buttons]="alertButtons" 
+(didDismiss)="setOpen(false)"
+></ion-alert>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button routerLink="/login" class="custom-logout-button" color="warning">
+    <ion-icon name="log-out"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+</ion-content>

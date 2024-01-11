@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start"> </ion-buttons>
+    <ion-title style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis" [title]="nombreUsuario">
+      <img src="assets/icon/logo.ico" alt="Logo de la aplicación" class="logo">
+      Bienvenido {{ nombreUsuario }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollY]="false">
+  <!-- Lista para mostrar los códigos escaneados -->
+  <ion-list *ngIf="barcodes.length > 0">
+    <ion-item *ngFor="let barcode of barcodes">
+      <!-- Muestra los datos del código de barras escaneado -->
+      <ion-label>
+        Código: {{ barcode.rawValue }}
+        Tipo: {{ barcode.format }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Botón para enviar los datos escaneados a la API -->
+  <ion-button expand="block" (click)="sendButtonClicked()">Verificar QR</ion-button>
+  <ion-button expand="block" fill="solid" color="warning" (click)="limpiarEscaneos()">Limpiar</ion-button>
+
+   <!-- Botón "Cerrar Sesión" en la esquina inferior izquierda -->
+   <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button (click)="logout()" color="danger" >
+      <ion-icon name="log-out"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+    <!-- Botón de escaneo al fondo derecho -->
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="scan()" [disabled]="!isSupported">
+      <ion-icon name="scan"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+

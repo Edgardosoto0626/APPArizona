@@ -1,0 +1,40 @@
+ion-toolbar{
+    --ion-background-color: transparent;
+    --ion-background-color:#f2dc86;
+}
+
+ion-content{
+    --ion-background-color: linear-gradient(#f2dc86,#f3e19b, #ede1b1);
+}
+ion-content {
+	--padding-top: 20%;
+	--padding-start: 10%;
+	--padding-end: 10%;
+    background-size: cover;
+	--background: url(../../../assets/image/complejo.jpeg) 0 0/100% 100% no-repeat;
+    filter: blur(3);
+}
+.logo {
+    height: 50px; /* Cambia este valor para ajustar la altura del logo */
+    /* Opcional: Puedes agregar otras propiedades CSS para ajustar el logo, como width, margin, etc. */
+  }
+  ion-button {
+    --background: #f2dc86;
+    --background-hover: #f2dc86;
+    --background-activated: #ede1b1;
+    --background-focused: #f2dc86;
+  
+    --color: WHITE;
+  
+    --border-radius: 0;
+    --border-color: #000;
+    --border-style: solid;
+    --border-width: 1px;
+  
+    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+  
+    --ripple-color: deeppink;
+  
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }

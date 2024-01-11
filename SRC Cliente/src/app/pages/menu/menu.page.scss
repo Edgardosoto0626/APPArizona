@@ -1,0 +1,46 @@
+ion-content{
+    --ion-background-color: transparent;
+
+}
+
+.custom-item {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .custom-row {
+    align-items: center;
+  }
+
+  .custom-col {
+    text-align: center;
+  }
+  .custom-button {
+    display: grid;
+  place-items: center;
+  height: 40px; /* Altura de la sección, ajusta según tu diseño */
+      
+  }
+
+  .color-boton{
+    --background-activated: #4ec434;
+    --border-color: rgb(47, 101, 29);
+    --background: #2e5a27;
+  }
+
+.bg-color{
+    background: linear-gradient(to right, #3ec324, #020202);
+}
+
+ion-toolbar{
+    --ion-background-color:transparent;
+    --opacity:0;
+}
+
+h2{
+    color: rgb(255, 255, 255);
+}
+p{
+    color: rgb(255, 255, 255);
+}

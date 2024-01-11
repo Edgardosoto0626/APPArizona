@@ -1,0 +1,99 @@
+ion-content{
+    --ion-background-color: transparent;
+
+}
+
+.bg-color{
+    background: linear-gradient(to right, #3ec324, #020202);
+}
+
+ion-header{
+    position: absolute;
+}
+
+ion-toolbar{
+    --ion-background-color:transparent;
+    --opacity:0;
+}
+
+ion-card{
+    --ion-background-color: transparent;
+    box-shadow: none !important;
+}
+
+ion-card-title{
+    margin-top: 50px !important;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+}
+
+ion-card-subtitle{
+    text-align: center;
+    padding-top: 15px !important;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 400;
+    text-transform: none;
+    padding: 0 30px;
+}
+
+ion-content{
+    padding-top: 30px;
+}
+
+ion-item{
+    color: #ffffff;
+--border-color:#d4d7db;
+--highlight-color-focused:#ffffff;
+--padding-start:0;
+--inner-padding-end:0;
+font-size: 15px;
+ion-input{
+    color: #ffffff;
+}
+
+ion-icon{
+    padding-right: 6px;
+    font-size: 18px;
+}
+
+ion-input:hover{
+    color: #000000;
+    }
+}
+
+.sign-btn-wrap{
+    text-align: center;
+    padding-top: 20px;
+    .sign-tbn{
+        --ion-primary-color:#ffffff;
+        --background-activated: #E1EAF9;
+        --background-focused: #E1EAF9;
+        --background-hover: #ffffff;
+        color:#f4f6fa;
+        border-radius: 25px;
+        --background: #ffffff;
+        background-color: #ffffff;
+    }
+}
+
+.text-tag{
+    margin-top: 30px;
+    text-align: center;
+    span{
+        font-size: 15px;
+        font-weight: normal;
+        color:#898585;
+    }
+}
+
+.social-btns{
+    margin-top: 25px;
+    text-align: Center;
+    ion-button{
+        width:45px;
+        padding-left: 5px !important;
+    }
+}

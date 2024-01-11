@@ -1,0 +1,23 @@
+
+ion-content {
+	--padding-top: 40%;
+	--padding-start: 10%;
+	--padding-end: 10%;
+      background-size: cover;
+	--background: url(../../../assets/image/LoginC.jpeg) 0 0/100% 100% no-repeat;
+  
+    
+}
+
+  .gradient-item {
+    --background: linear-gradient(60deg, rgba(255, 255, 255, 0.624) 40%, rgba(255, 255, 255, 0.723) 80%, rgba(255, 255, 255, 0.961) 100%); /* Fondo con degradado transparente */
+    --border-style: none; /* Eliminar cualquier estilo de borde si es necesario */
+    --highlight-background-focused: transparent; /* Hacer transparente el fondo al enfocar */
+    /* Otros estilos personalizados si los necesitas */
+  }
+
+  .dark-text {
+    color: black; /* Cambia el color del texto a un tono más oscuro */
+        /* Otros estilos personalizados si los necesitas */
+  }
+

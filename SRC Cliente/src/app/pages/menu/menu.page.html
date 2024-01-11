@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis" [title]="nombreUsuario">
+      Bienvenido {{ nombreUsuario }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-color" [fullscreen]="true">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list inset>
+    <ion-item *ngFor="let user of reserva" class="custom-item" >
+      <ion-grid>
+        <ion-row class="custom-row">
+          <ion-col size="6" class="custom-col">
+            <h2>{{user.dia}}</h2>
+          </ion-col>
+          <ion-col size="5" class="custom-col">
+            <p>{{user.estado}}</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item> 
+  </ion-list>
+  
+
+<div class="custom-button">
+  <ion-button class="color-boton"   type="submit" (click)="toggleModal()">Mostrar/Esconder QR</ion-button>
+</div>
+
+
+  <!-- Contenido donde se mostrarán los códigos QR en el modal -->
+  <ion-list *ngIf="showModal">
+    <ion-card *ngFor="let qrData of qrCodesWithTitles">
+      <ion-card-header>
+        <ion-card-title>{{ qrData.title }}</ion-card-title>
+      </ion-card-header>
+      <img [src]="qrData.qrCode" alt="Código QR generado">
+    </ion-card>
+  </ion-list>
+  
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="logout()" color="warning" >
+      <ion-icon name="log-out"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
